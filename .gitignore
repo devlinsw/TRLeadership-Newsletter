@@ -1,0 +1,9 @@
+# generated output
+*.html
+issues/candidates-*.md
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

@@ -45,9 +45,17 @@ TRLeadership's brand is leadership development. A workplace AI newsletter extend
 
 ### Tooling (Cheap/Free to Start)
 
-- **Buttondown** or **ConvertKit** — simple, cheap email platforms with good templates
-- Write in markdown, reuse the same template every week
-- Curation takes ~30 min/week once you have a rhythm
+| Platform | Why | Watch out |
+|---|---|---|
+| **Buttondown** | Writes in native markdown — pairs perfectly with this repo's workflow. Cheapest at small list sizes. | Fewer growth features; referral program is DIY |
+| **beehiiv** | Built for TLDR-style newsletters: built-in referral program, web archive, polls, and a recommendation network that actually grows lists. Free to 2,500 subscribers. | Editor is block-based, not markdown-native (use `scripts/build.py` to paste HTML) |
+| **Kit** (formerly ConvertKit) | Strong automations if the newsletter later feeds into TRLeadership program funnels | Priciest of the three as the list grows |
+
+**Recommendation:** start on **beehiiv** — the free tier covers the first 2,500 subscribers, and the referral program in the growth plan (step 4 below) comes built-in instead of being a separate project at 500 subs.
+
+- Write each issue in markdown from `templates/issue-template.md`
+- Run `python3 scripts/build.py issues/issue-NNN.md` to generate email-ready HTML plus the subject/preview text
+- Curation takes ~30 min/week once you have a rhythm (see `PRODUCTION-CHECKLIST.md`)
 
 ### Growth Strategy
 
@@ -59,12 +67,31 @@ TRLeadership's brand is leadership development. A workplace AI newsletter extend
 
 ## Name Options
 
-| Name | Vibe |
-|---|---|
-| **The AI Edge** | Sharp, leadership-y, fits TRLeadership brand |
-| **AI @ Work** | Literal, clear, no explanation needed |
-| **Work Smarter** | Ties to productivity, softer |
-| **The Brief** | Short, professional — "The TRLeadership Brief" |
+| Name | Vibe | Availability |
+|---|---|---|
+| ~~**The AI Edge**~~ | Sharp, leadership-y | ⚠️ **Crowded.** At least six active newsletters already use this exact name (beehiiv, Substack, LinkedIn, standalone sites). Hard to rank for, easy to confuse. |
+| **AI @ Work** | Literal, clear, no explanation needed | Check before committing |
+| **Work Smarter** | Ties to productivity, softer | Check before committing |
+| **The TRLeadership Brief** | Short, professional, brand-anchored | Safest — the brand name makes it unique by definition |
+
+**Recommendation:** "The TRLeadership Brief" or another brand-anchored name. Generic AI names are saturated; anchoring to the TRLeadership brand is unique, searchable, and reinforces that this is *leadership* content, not another AI newsletter. Whatever the pick, search it + check the domain/handle before writing issue 2.
+
+## Compliance (Canada — do this before the first send)
+
+TRLeadership is Canadian, so **CASL** applies — and it's stricter than the US CAN-SPAM Act (penalties up to $10M for organizations):
+
+1. **Express consent, recorded.** Double opt-in through the email platform, with date and method logged. Don't blast the existing TRLeadership list wholesale — send one invitation email asking people to opt in to the newsletter specifically.
+2. **Identification.** Business name and a physical mailing address in every footer.
+3. **Unsubscribe.** Working one-click unsubscribe in every send, honored within 10 business days. (The template and build script already include the footer slots.)
+
+## Editorial Integrity (the credibility rule)
+
+This newsletter's entire value is trust with a non-technical audience — one wrong claim they repeat in a meeting burns it. Two rules:
+
+1. **No stat without a link to its primary source.** Not a blog citing the survey — the survey.
+2. **Re-verify product claims every issue.** AI product features, pricing, and privacy policies change monthly. (Example: the common claim "paid AI plans don't train on your data" is now wrong for both ChatGPT and Claude — personal paid plans train unless the user opts out; only business plans exclude it by default. The kind of thing that changes under you.)
+
+The fact-check gate in `PRODUCTION-CHECKLIST.md` makes this a 15-minute step, not a research project.
 
 ## Getting Started
 

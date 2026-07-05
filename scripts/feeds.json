@@ -1,0 +1,10 @@
+{
+  "feeds": [
+    {"name": "The Verge — AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"},
+    {"name": "TechCrunch — AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
+    {"name": "ZDNet — AI", "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml"},
+    {"name": "Microsoft 365 Blog", "url": "https://www.microsoft.com/en-us/microsoft-365/blog/feed/"},
+    {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml"}
+  ],
+  "_notes": "Add/remove feeds freely. Verify each URL on first run — publishers move RSS endpoints. Sources without RSS (Anthropic news, LinkedIn, TLDR AI) still need the 5-minute manual scan."
+}

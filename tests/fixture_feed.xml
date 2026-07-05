@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Fixture Feed</title>
+  <link>https://example.com</link>
+  <item>
+    <title>Recent story about Copilot</title>
+    <link>https://example.com/recent</link>
+    <pubDate>{RECENT}</pubDate>
+    <description>&lt;p&gt;Copilot can now generate &lt;b&gt;formulas&lt;/b&gt; from plain English &amp;amp; more.&lt;/p&gt;</description>
+  </item>
+  <item>
+    <title>Old story that should be filtered</title>
+    <link>https://example.com/old</link>
+    <pubDate>{OLD}</pubDate>
+    <description>Ancient news.</description>
+  </item>
+  <item>
+    <title>Undated story kept for review</title>
+    <link>https://example.com/undated</link>
+    <description>No pubDate on this one.</description>
+  </item>
+</channel>
+</rss>
